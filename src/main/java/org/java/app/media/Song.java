@@ -1,7 +1,10 @@
 package org.java.app.media;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Song {
 	
+	private static final AtomicInteger count = new AtomicInteger(0);
 	private int id;
 	private String title;
 	private String artist;
@@ -19,7 +22,7 @@ public class Song {
 	}
 
 	private void setId() {
-		id++;
+		id = count.incrementAndGet();
 	}
 
 	public String getTitle() {

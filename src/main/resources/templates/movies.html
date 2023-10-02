@@ -8,7 +8,12 @@
 
 	<h1>Best Movies of the Year</h1>
 	<hr>
-	<p>[[${movies}]]</p>
+	<ul>
+		<li th:each="movie: ${movies}">
+			<a th:href="'/details/movies/' + ${movie.getId()}">[[${movie}]]</a>
+		</li>
+	</ul>
+	<hr>
 	<a href="/">Home</a>
 
 </body>

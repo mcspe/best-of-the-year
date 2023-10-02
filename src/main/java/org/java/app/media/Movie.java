@@ -1,7 +1,10 @@
 package org.java.app.media;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Movie {
 
+	private static final AtomicInteger count = new AtomicInteger(0);
 	private int id;
 	private String title;
 	private int year;
@@ -17,7 +20,7 @@ public class Movie {
 	}
 
 	private void setId() {
-		id++;
+		id = count.incrementAndGet();
 	}
 
 	public String getTitle() {

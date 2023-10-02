@@ -8,7 +8,12 @@
 
 	<h1>Best Songs of the Year</h1>
 	<hr>
-	<p>[[${songs}]]</p>
+	<ul>
+		<li th:each="song: ${songs}">
+			<a th:href="'/details/songs/' + ${song.getId()}">[[${song}]]</a>
+		</li>
+	</ul>
+	<hr>
 	<a href="/">Home</a>
 
 </body>
