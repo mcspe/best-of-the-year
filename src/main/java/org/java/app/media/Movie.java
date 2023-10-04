@@ -8,11 +8,13 @@ public class Movie {
 	private int id;
 	private String title;
 	private int year;
+	private String img;
 
-	public Movie(String title, int year) {
+	public Movie(String title, int year, String img) {
 		setId();
 		setTitle(title);
 		setYear(year);
+		setImg(img);
 	}
 
 	public int getId() {
@@ -37,6 +39,14 @@ public class Movie {
 
 	public void setYear(int year) {
 		this.year = year;
+	}
+	
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
 	}
 	
 	@Override

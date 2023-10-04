@@ -9,12 +9,14 @@ public class Song {
 	private String title;
 	private String artist;
 	private int year;
+	private String img;
 
-	public Song(String title, String artist, int year) {
+	public Song(String title, String artist, int year, String img) {
 		setId();
 		setTitle(title);
 		setArtist(artist);
 		setYear(year);
+		setImg(img);
 	}
 
 	public int getId() {
@@ -49,6 +51,14 @@ public class Song {
 		this.year = year;
 	}
 	
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
+	}
+
 	@Override
 	public String toString() {
 		return getArtist() + " - " + getTitle() + " (" + getYear() + ")";

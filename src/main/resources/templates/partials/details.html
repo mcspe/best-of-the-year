@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+	<div th:fragment="details">
+
+		<h1 class="text-center">[[${media.getTitle()}]]</h1>
+		<hr>
+		<p>
+			[[${media}]]
+		</p>
+		<hr>
+		<a href="/movies" th:if="${mediaType.equals('movie')}">Back to Movies list</a>
+		<a href="/songs" th:unless="${mediaType.equals('movie')}">Back to Songs list</a>
+		<br>
+		<a href="/">Back to Home</a>
+	
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+	<div th:fragment="movies">
+
+		<h1 class="text-center">Best Movies of the Year</h1>
+		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 my-5">
+			<div th:each="movie: ${movies}" class="col my-3">
+				<a class="d-block" th:href="'/details/movies/' + ${movie.getId()}">
+					<div class="media-card card text-bg-dark">
+						<img th:src="${movie.getImg()}" class="card-img" alt="${movie.getTitle()}">
+						<div class="card-img-overlay bg-dark bg-opacity-50">
+							<h3 class="card-title">[[${movie.getTitle()}]]</h3>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		
+		
+		
+		<!--  <hr>
+		<ul>
+			<li th:each="movie: ${movies}"><a
+				th:href="'/details/movies/' + ${movie.getId()}">[[${movie}]]</a></li>
+		</ul>
+		<hr>
+		<a href="/">Home</a>  -->
+
+	</div>
+
+</body>
+</html>
